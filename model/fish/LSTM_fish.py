@@ -8,7 +8,8 @@ from sklearn.preprocessing import MinMaxScaler
 DATA_PATH = "../data/fish/processed/fish_final.csv"
 SAVE_PATH = "../data/fish/save"
 TOP3 = ['Aplodinotus grunniens', 'Ictalurus punctatus', 'Dorosoma cepedianum']
-device = torch.device('mps')
+# device = torch.device('mps')
+device = torch.device('cuda')
 
 # 获取单一的鱼类数据
 def get_fish_data(fish_name):

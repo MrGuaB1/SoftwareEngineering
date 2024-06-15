@@ -27,23 +27,7 @@ def system(request):
     user = User.objects.get(id=uid)
     dic = {0:'普通用户',1:'批发商',2:'养殖户',3:'管理员',4:'高级管理员'}
     return render(request, 'system.html', {'uid': uid, 'username': user.username, 'permission': user.permission, 'identity':dic[user.permission]})
-    
-    # return render(request, 'system.html')
-
-def MainInfo(request):
-    info = {
-        'ele_V' : 25.9,
-        'PH'    : 8.37,
-        'tempreture' : 25.9,
-        'NTU'   : 2.05,
-        'location': '../static/images/1.jpg',
-    }
-    history = {
-        'ele_V' : [25.9, 25.8, 25.7, 25.6, 25.5, 25.4, 25.3, 25.2, 25.1, 25.0],
-        'PH'    : [8.37, 8.36, 8.35, 8.34, 8.33, 8.32, 8.31, 8.30, 8.29, 8.28],
-        'tempreture' : [25.9, 25.8, 25.7, 25.6, 25.5, 25.4, 25.3, 25.2, 25.1, 25.0],
-        'NTU'   : [2.05, 2.04, 2.03, 2.02, 2.01, 2.00, 1.99, 1.98, 1.97, 1.96],
-    }
+  
 
 
 
