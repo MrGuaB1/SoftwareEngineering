@@ -8,7 +8,6 @@ import re,json,os
 import pandas as pd
 import numpy as np
 
-# Create your views here.
 def Index(request):
 
     return render(request, 'index.html')
