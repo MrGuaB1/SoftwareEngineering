@@ -63,7 +63,6 @@ def AdminControl(request):
     return render(request, 'admincontrol.html')
 
 
-# 注册登录
 def login(request):
     if request.method == 'GET':
         # 先尝试从cookie登录
